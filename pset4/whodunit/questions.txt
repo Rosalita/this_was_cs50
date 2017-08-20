@@ -1,0 +1,12 @@
+1.  stdint.h is a header file that gives access to signed and unsigned integers of various bit sizes
+2.  So we know an int will always be the same known size in memory, a set number of bits
+3.  A BYTE is 8 bits which is 1 byte, a DWORD is 32 bits which is 4 bytes, a LONG is 32 bits which is 4 bytes, a WORD is 16 bits which is two bytes
+4.  The first two bytes will be part of the bitmapfileheader specifically the bfType. This must be BM, in hex these two bytes would be 0x42 and 0x4D
+5.  bfsize is the size in bytes of the whole bitmap file while bisize is the size in bytes required by the structure
+6.  If biHeight is negative this means that the bitmap is represented in memory from the top down starting in the top left corner
+7.  In the bitmapinfo header the field biBitCount specified the colour depth number of bits per pixel
+8.  fopen() will return null if it can't complete, for example if it can't find the file it will return null
+9.  the third argument to fread() is the number of elements of data to read from the stream. The code is always only reading 1 element
+10. 3
+11. fseek() sets the file position of the stream to the number of bytes that it is given.
+12. SEEK_CUR represents the current position of the file pointer.
