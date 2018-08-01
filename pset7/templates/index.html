@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div align="center">
+      <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Last Price Paid</th>
+                <th>Last Updated</th>
+                <th>Current Price</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for stock in portfolio %}
+            <tr>
+                <td>{{stock.symbol}}</td>
+                <td>{{stock.quantity}}</td>
+                <td>{{stock.lastpricepaid}}</td>
+                <td>{{stock.updated}}</td>
+                <td>{{stock.currentprice}}</td>
+            </tr>
+     {% endfor %}
+     
+        </tbody>
+    
+    </table>
+    </div>
+    <br>
+       <p> Cash : {{cash}} Stock Value : {{totalstockvalue}} All Assets : {{allassets}} </p>
+{% endblock %}
